@@ -33,8 +33,8 @@ const showPhone = (phonedetails,isshowAll) => {
         <div class="card-body">
           <h2 class="card-title">${singleInfo.phone_name}</h2>
           <p>If a dog chews shoes whose shoes does he choose?</p>
-          <div class="card-actions justify-end">
-            <button class="btn btn-primary">Buy Now</button>
+          <div class="card-actions justify-center">
+            <button class="btn btn-primary" onclick = "modalDetails('${singleInfo.slug}')">Show Details</button>
           </div>
         </div>
       </div>
@@ -43,6 +43,13 @@ const showPhone = (phonedetails,isshowAll) => {
 
     })
     toggoleSpinner(false);
+}
+
+const modalDetails = async(id) => {
+    // console.log(id);
+    const res =await fetch(`https://openapi.programming-hero.com/api/phone/${id}`);
+    const data = await res.json();
+    console.log(data);
 }
 
 const handleButton = (isshowAll) => {
