@@ -26,6 +26,21 @@
             </div>
             <button id="hide-btn" class="btn btn-active btn-accent hidden" onclick="showAll()">SHOW ALL</button>
         </section>
+        <!-- Open the modal using ID.showModal() method -->
+            
+            <dialog id="open_model_datails" class="modal modal-bottom sm:modal-middle">
+            <form method="dialog" class="modal-box">
+                <h3 id="phone-name" class="font-bold text-lg"></h3>
+                <div id="show-details-container">
+                    
+                </div>
+                <div class="modal-action">
+                <!-- if there is a button in form, it will close the modal -->
+                <button class="btn">Close</button>
+                </div>
+            </form>
+            </dialog>
+
     </main>
     <footer>
 
@@ -33,3 +48,10 @@
     <script src="./js/phone.js"></script>
 </body>
 </html>
+
+
+
+
+<!-- 
+    <p><span>Display Size :</span></p>
+    <p><span>Chipset :</span></p> -->

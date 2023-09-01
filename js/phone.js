@@ -50,8 +50,22 @@ const modalDetails = async(id) => {
     const res =await fetch(`https://openapi.programming-hero.com/api/phone/${id}`);
     const data = await res.json();
     console.log(data);
+    const phone = data.data;
+    
+    showPhoneDetails(phone);
 }
 
+const showPhoneDetails = (phone) => {
+    const phoneName = document.getElementById('phone-name');
+    phoneName.innerText = phone.name;
+    const showDetailsContainer = document.getElementById('show-details-container');
+    showDetailsContainer.innerHTML = `
+    <img src="${phone.image}" alt="">
+    <p><span>Storage :</span>${phone.mainFeatures.displaySize}</p>
+    <p><span>Chipset :</span>${phone.mainFeatures.chipSet}</p>
+    `;
+    open_model_datails.showModal();
+}
 const handleButton = (isshowAll) => {
     // console.log('button is clicked');
     toggoleSpinner(true);
