@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- daisyUI -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.6.4/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Mobile-hunter</title>
+</head>
+<body>
+    <header>
+
+    </header>
+    <main>
+        <section class="seach bg-green-600 text-center py-6">
+            <input id="search-field" type="text" placeholder="search" class="input input-bordered w-full max-w-xs bg-amber-300 text-white" />
+            <button class="btn btn-accent" onclick="handleButton()">SEARCH</button>
+        </section>
+        <div class="text-center py-10">
+            <span id="spinner" class=" loading loading-ring text-red-500 loading-lg hidden" ></span>
+           </div>
+        <section>
+            <div id="card-container" class="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 my-10">
+            
+            </div>
+            <button id="hide-btn" class="btn btn-active btn-accent hidden" onclick="showAll()">SHOW ALL</button>
+        </section>
+    </main>
+    <footer>
+
+    </footer>
+    <script src="./js/phone.js"></script>
+</body>
+</html>
